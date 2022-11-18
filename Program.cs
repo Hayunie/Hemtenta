@@ -122,13 +122,30 @@
                     Console.WriteLine("Hej då!");
                     break;
                 }
-                else if (MyIO.Equals(command, "lista"))
+                // TBD: Ändra till att bara lista Active 
+                else if (MyIO.Equals(command, "lista")) 
                 {
+                    // NYI: Lista alla ska visa alla uppgifter
+
+                    // NYI: if (MyIO.HasArgument(command, "allt")) - lista Alla upgifter
+
+                    // TBD: Ska flyttas och göras om till att visa active när command är beskriv
                     if (MyIO.HasArgument(command, "allt"))
                         Todo.PrintTodoList(verbose: true);
                     else
                         Todo.PrintTodoList(verbose: false);
                 }
+                // NYI: else if (MyIO.Equals(command, "ny")) - skapa en ny uppgift
+
+                // NYI: else if (MyIO.HasArgument(command, "spara")) - Spara uppgifterna
+
+                // NYI: else if (MyIO.HasArgument(command, "ladda")) - ladda listan todo.lis med
+
+                // NYI: else if (MyIO.HasArgument(command, "aktivera /uppgift/")) - Sätt status på uppgift till Active
+
+                // NYI: else if (MyIO.HasArgument(command, "klar /uppgift/")) - sätt status på uppgift till Ready
+
+                // NYI: else if (MyIO.HasArgument(command, "vänta /uppgift/ ")) - sätt status på uppgift till Waiting
                 else
                 {
                     Console.WriteLine($"Okänt kommando: {command}");
